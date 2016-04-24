@@ -1,0 +1,58 @@
+
+<div>
+    <h2><span translate="consoleApp.externalService.detail.title">External Service</span> {{vm.externalService.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="consoleApp.externalService.name">Name</span></dt>
+        <dd>
+            <span>{{vm.externalService.name}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.externalService.description">Description</span></dt>
+        <dd>
+            <span>{{vm.externalService.description}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.externalService.contact">Contact</span></dt>
+        <dd>
+            <span>{{vm.externalService.contact}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.externalService.endpoint">Endpoint</span></dt>
+        <dd>
+            <span>{{vm.externalService.endpoint}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.externalService.healthCheck">Health Check</span></dt>
+        <dd>
+            <span>{{vm.externalService.healthCheck}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.externalService.rateLimit">Rate Limit</span></dt>
+        <dd>
+            <span>{{vm.externalService.rateLimit}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.externalService.methods">Methods</span></dt>
+        <dd>
+            <span>{{vm.externalService.methods}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.externalService.version">Version</span></dt>
+        <dd>
+            <span>{{vm.externalService.version}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.externalService.module">Module</span></dt>
+        <dd>
+            <a ui-sref="gateway-module-detail({id:vm.externalService.module.id})">{{vm.externalService.module.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

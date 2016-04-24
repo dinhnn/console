@@ -1,0 +1,27 @@
+{
+    "consoleApp": {
+        "gatewayModule" : {
+            "home": {
+                "title": "Gateway Modules",
+                "createLabel": "Create a new Gateway Module",
+                "createOrEditLabel": "Create or edit a Gateway Module",
+                "search": "Search for Gateway Module"
+            },
+            "created": "A new Gateway Module is created with identifier {{ param }}",
+            "updated": "A Gateway Module is updated with identifier {{ param }}",
+            "deleted": "A Gateway Module is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Gateway Module {{ id }}?"
+            },
+            "detail": {
+                "title": "Gateway Module"
+            },
+            "name": "Name",
+            "description": "Description",
+            "artifact": "Artifact",
+            "activated": "Activated",
+            "instances": "Instances",
+            "settings": "Settings"
+        }
+    }
+}

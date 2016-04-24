@@ -1,0 +1,36 @@
+entity GatewayModule{
+	name String required maxlength(100)
+	description String
+	artifact String required maxlength(100) pattern("^[\w\.-]+:[\w\.-]+:[\w\.-]+$")
+	activated Boolean
+	instances Integer required
+	settings String
+}
+entity ExternalService{
+	name String required pattern("^\w+$")
+	description String
+	contact String
+	endpoint String required
+	healthCheck String required
+	rateLimit Integer
+	methods String
+	version Integer
+}
+entity ClientApp{
+	name String required
+	description String
+	contact String
+}
+entity ServiceAccess{
+	rateLimit Integer
+	methods String
+}
+relationship ManyToOne{
+	ExternalService{module} to GatewayModule
+}
+relationship ManyToOne{
+	ServiceAccess{externalService} to ExternalService
+}
+relationship OneToMany{
+	ClientApp{access} to ServiceAccess
+}

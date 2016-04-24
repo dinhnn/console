@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span translate="consoleApp.serviceAccess.detail.title">Service Access</span> {{vm.serviceAccess.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="consoleApp.serviceAccess.rateLimit">Rate Limit</span></dt>
+        <dd>
+            <span>{{vm.serviceAccess.rateLimit}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.serviceAccess.methods">Methods</span></dt>
+        <dd>
+            <span>{{vm.serviceAccess.methods}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.serviceAccess.clientApp">Client App</span></dt>
+        <dd>
+            <a ui-sref="client-app-detail({id:vm.serviceAccess.clientApp.id})">{{vm.serviceAccess.clientApp.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="consoleApp.serviceAccess.externalService">External Service</span></dt>
+        <dd>
+            <a ui-sref="external-service-detail({id:vm.serviceAccess.externalService.id})">{{vm.serviceAccess.externalService.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,30 @@
+{
+    "consoleApp": {
+        "externalService" : {
+            "home": {
+                "title": "External Services",
+                "createLabel": "Create a new External Service",
+                "createOrEditLabel": "Create or edit a External Service",
+                "search": "Search for External Service"
+            },
+            "created": "A new External Service is created with identifier {{ param }}",
+            "updated": "A External Service is updated with identifier {{ param }}",
+            "deleted": "A External Service is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete External Service {{ id }}?"
+            },
+            "detail": {
+                "title": "External Service"
+            },
+            "name": "Name",
+            "description": "Description",
+            "contact": "Contact",
+            "endpoint": "Endpoint",
+            "healthCheck": "Health Check",
+            "rateLimit": "Rate Limit",
+            "methods": "Methods",
+            "version": "Version",
+            "module": "Module"
+        }
+    }
+}

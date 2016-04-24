@@ -1,0 +1,91 @@
+<div>
+    <h2 translate="consoleApp.externalService.home.title">External Services</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="external-service.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="consoleApp.externalService.home.createLabel">
+                        Create new External Service
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'consoleApp.externalService.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="consoleApp.externalService.name">Name</span></th>
+                    <th><span translate="consoleApp.externalService.description">Description</span></th>
+                    <th><span translate="consoleApp.externalService.contact">Contact</span></th>
+                    <th><span translate="consoleApp.externalService.endpoint">Endpoint</span></th>
+                    <th><span translate="consoleApp.externalService.healthCheck">Health Check</span></th>
+                    <th><span translate="consoleApp.externalService.rateLimit">Rate Limit</span></th>
+                    <th><span translate="consoleApp.externalService.methods">Methods</span></th>
+                    <th><span translate="consoleApp.externalService.version">Version</span></th>
+                    <th><span translate="consoleApp.externalService.module">Module</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="externalService in vm.externalServices track by externalService.id">
+                    <td><a ui-sref="external-service-detail({id:externalService.id})">{{externalService.id}}</a></td>
+                    <td>{{externalService.name}}</td>
+                    <td>{{externalService.description}}</td>
+                    <td>{{externalService.contact}}</td>
+                    <td>{{externalService.endpoint}}</td>
+                    <td>{{externalService.healthCheck}}</td>
+                    <td>{{externalService.rateLimit}}</td>
+                    <td>{{externalService.methods}}</td>
+                    <td>{{externalService.version}}</td>
+                    <td>
+                        <a ui-sref="gateway-module-detail({id:externalService.module.id})">{{externalService.module.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="external-service-detail({id:externalService.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="external-service.edit({id:externalService.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="external-service.delete({id:externalService.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

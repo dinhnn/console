@@ -1,0 +1,25 @@
+{
+    "consoleApp": {
+        "serviceAccess" : {
+            "home": {
+                "title": "Service Accesses",
+                "createLabel": "Create a new Service Access",
+                "createOrEditLabel": "Create or edit a Service Access",
+                "search": "Search for Service Access"
+            },
+            "created": "A new Service Access is created with identifier {{ param }}",
+            "updated": "A Service Access is updated with identifier {{ param }}",
+            "deleted": "A Service Access is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Service Access {{ id }}?"
+            },
+            "detail": {
+                "title": "Service Access"
+            },
+            "rateLimit": "Rate Limit",
+            "methods": "Methods",
+            "clientApp": "Client App",
+            "externalService": "External Service"
+        }
+    }
+}

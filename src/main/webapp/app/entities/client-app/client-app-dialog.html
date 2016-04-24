@@ -1,0 +1,21 @@
+<md-dialog ng-cloak>
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+    <md-toolbar>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myClientAppLabel" translate="consoleApp.clientApp.home.createOrEditLabel">Create or edit a Client App</h4>
+    </md-toolbar>
+    <md-dialog-content>
+        
+      <formly-form model="vm.model" fields="vm.clientAppFields" options="vm.options" form="vm.form">
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+        <md-button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </md-button>
+        <md-button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </md-button>
+    </md-dialog-actions>
+</form>
+</md-dialog>
